@@ -1,0 +1,15 @@
+*{
+    padding: 10;
+    margin:10;
+
+}
+#myCanvas{
+    background: greenyellow;
+    display: block;
+    margin: 20
+    auto;
+    
+}
+h1{
+    text-align: center;
+}
