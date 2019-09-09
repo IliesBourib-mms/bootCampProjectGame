@@ -1,6 +1,6 @@
 class Bricks {
     constructor(ball) {
-        this.brickRowCount = 8;
+        this.brickRowCount = 5;
         this.brickColumnCount = 20;
         this.brickWidth = 15;
         this.brickHeight = 10;
