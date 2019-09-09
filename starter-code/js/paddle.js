@@ -3,7 +3,7 @@ class Paddle{
 constructor(){
 
     this.paddleHeight = 10;
-    this.paddleWidth = 50;
+    this.paddleWidth = 80;
     this.paddleX = (canvas.width-this.paddleWidth)/2;
     this.rightPressed = false;
     this.leftPressed = false;
@@ -26,8 +26,8 @@ drawPaddle(){
     }
     else if(paddle.leftPressed){
         paddle.paddleX -= 7;
-        if (paddle.paddleX <0){
-            paddle.paddleX = 0;
+        if (paddle.paddleX <50){
+            paddle.paddleX = 50;
         }
     }
 }

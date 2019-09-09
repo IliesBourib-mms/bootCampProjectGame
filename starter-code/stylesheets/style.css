@@ -4,14 +4,18 @@
 
 }
 #myCanvas{
-    background: greenyellow;
-    display: block;
-    margin: 20
-    auto;
-    
+    background: rgb(255, 217, 47);
+    display: flex;
+    justify-content: center;
+    margin: 20;
+    vertical-align: middle;   
 }
-
-
 h1{
     text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+
+}
+html{
+    background-image: url("../img/background.jpg") no-repeat;
+    background-color: #cccccc;
 }
