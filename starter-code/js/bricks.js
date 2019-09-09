@@ -1,12 +1,12 @@
 class Bricks {
     constructor(ball) {
         this.brickRowCount = 8;
-        this.brickColumnCount = 30;
+        this.brickColumnCount = 20;
         this.brickWidth = 15;
         this.brickHeight = 10;
-        this.brickPadding = 10;
-        this.brickOffsetTop = 30;
-        this.brickOffsetLeft = 30;
+        this.brickPadding = 20;
+        this.brickOffsetTop = 50;
+        this.brickOffsetLeft = 50;
         this.bricks = [];
         this.ball = ball;
     }
@@ -49,7 +49,10 @@ class Bricks {
                         this.ball.y > brick.y &&
                         this.ball.y < brick.y + this.brickHeight) {
                         ball.dy = -ball.dy;
-                        this.bricks.status = 0;
+                        brick.status = 0;
+                        ctx.beginPath();
+                        ctx.clearRect(brick.x,brick.y,this.brickWidth,this.brickHeight);
+                        ctx.closePath();
                         score++;
                         if (score === this.brickColumnCount * this.brickRowCount) {
                             alert("You have won!");

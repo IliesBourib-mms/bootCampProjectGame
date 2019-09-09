@@ -3,12 +3,19 @@
     margin:10;
 
 }
+body{
+    background-image: url(../img/background.jpg);
+}
 #myCanvas{
-    background: rgb(255, 217, 47);
+    background-image: url(../img/canvasBackground.jpg);
     display: flex;
+    
     justify-content: center;
-    margin: 20;
-    vertical-align: middle;   
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle; 
+    
 }
 h1{
     text-align: center;
@@ -17,5 +24,5 @@ h1{
 }
 html{
     background-image: url("../img/background.jpg") no-repeat;
-    background-color: #cccccc;
+    background-size: auto 100%;
 }
