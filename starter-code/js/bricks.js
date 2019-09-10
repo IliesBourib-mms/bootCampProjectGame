@@ -8,9 +8,6 @@ class Bricks {
         this.brickOffsetTop = 50;
         this.brickOffsetLeft = 50;
         this.bricks = [];
-        this.ball = ball;
-    }
-    drawBricks() {
         for (let columns = 0; columns < this.brickColumnCount; columns++) {
             this.bricks[columns] = [];
             for (let rows = 0; rows < this.brickRowCount; rows++) {
@@ -21,6 +18,10 @@ class Bricks {
                 };
             }
         }
+        this.ball = ball;
+    }
+    drawBricks() {
+        
         for (let columns = 0; columns < this.brickColumnCount; columns++) {
             for (let rows = 0; rows < this.brickRowCount; rows++) {
 
@@ -28,12 +29,16 @@ class Bricks {
                 let brickY = (rows * (this.brickHeight + this.brickPadding)) + this.brickOffsetTop;
                 this.bricks[columns][rows].x = brickX;
                 this.bricks[columns][rows].y = brickY;
+                let status = this.bricks[columns][rows].status;
 
-                ctx.beginPath();
-                ctx.rect(brickX, brickY, this.brickWidth, this.brickHeight);
-                ctx.fillStyle = "#8A4B08";
-                ctx.fill();
-                ctx.closePath();
+                if(status === 1){
+                    ctx.beginPath();
+                    ctx.rect(brickX, brickY, this.brickWidth, this.brickHeight);
+                    ctx.fillStyle = "#8A4B08";
+                    ctx.fill();
+                    ctx.closePath();
+                }
+                
 
             }
         }
@@ -50,9 +55,10 @@ class Bricks {
                         this.ball.y < brick.y + this.brickHeight) {
                         ball.dy = -ball.dy;
                         brick.status = 0;
-                        ctx.beginPath();
-                        ctx.clearRect(brick.x,brick.y,this.brickWidth,this.brickHeight);
-                        ctx.closePath();
+                        this.bricks[columns][rows].status = 0;
+                        //ctx.beginPath();
+                        //ctx.clearRect(brick.x,brick.y,this.brickWidth,this.brickHeight);
+                        //ctx.closePath();
                         score++;
                         if (score === this.brickColumnCount * this.brickRowCount) {
                             alert("You have won!");
