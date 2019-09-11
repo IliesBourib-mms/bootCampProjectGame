@@ -11,6 +11,7 @@ const PADDLE_HEIGHT = 100;
 const PADDLE_THICKNESS = 10;
 let player1Score = 0;
 let player2Score = 0;
+let paddle2X;
 
 function calculateMousePosition(evt) {
     let rect = pongCanvas.getBoundingClientRect();
