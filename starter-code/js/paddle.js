@@ -7,6 +7,10 @@ constructor(){
     this.paddleX = (canvas.width-this.paddleWidth)/2;
     this.rightPressed = false;
     this.leftPressed = false;
+    this.upPressedPlayer1 = false;
+    this.downPressedPlayer1 = false;
+    this.upPressedPlayer2 = false;
+    this.downPressedPlayer2 = false;
     
     
 
